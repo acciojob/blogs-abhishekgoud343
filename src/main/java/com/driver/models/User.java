@@ -21,15 +21,15 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user")
-    private List<Blog> bloglist = new ArrayList<>();
+    private List<Blog> blogList = new ArrayList<>();
 
-    public User(Integer id, String firstName, String lastName, String username, String password, List<Blog> bloglist) {
+    public User(Integer id, String firstName, String lastName, String username, String password, List<Blog> blogList) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.bloglist = bloglist;
+        this.blogList = blogList;
     }
 
     public User() {
@@ -75,11 +75,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Blog> getBloglist() {
-        return bloglist;
+    public List<Blog> getBlogList() {
+        return blogList;
     }
 
-    public void setBloglist(List<Blog> bloglist) {
-        this.bloglist = bloglist;
+    public void setBlogList(List<Blog> blogList) {
+        this.blogList = blogList;
     }
 }
