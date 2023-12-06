@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer imageId;
+    private Integer id;
 
     private String description;
 
@@ -18,8 +18,8 @@ public class Image {
     @ManyToOne
     private Blog blog;
 
-    public Image(Integer imageId, String description, String dimensions, Blog blog) {
-        this.imageId = imageId;
+    public Image(Integer id, String description, String dimensions, Blog blog) {
+        this.id = id;
         this.description = description;
         this.dimensions = dimensions;
         this.blog = blog;
@@ -28,12 +28,12 @@ public class Image {
     public Image() {
     }
 
-    public Integer getImageId() {
-        return imageId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setImageId(Integer imageId) {
-        this.imageId = imageId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDescription() {

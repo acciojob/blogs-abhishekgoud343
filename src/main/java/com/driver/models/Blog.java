@@ -11,7 +11,7 @@ import java.util.List;
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer blogId;
+    private Integer id;
 
     private String title;
 
@@ -26,8 +26,8 @@ public class Blog {
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
     private List<Image> imageList = new ArrayList<>();
 
-    public Blog(Integer blogId, String title, String content, Date pubDate, User user, List<Image> imageList) {
-        this.blogId = blogId;
+    public Blog(Integer id, String title, String content, Date pubDate, User user, List<Image> imageList) {
+        this.id = id;
         this.title = title;
         this.content = content;
         this.pubDate = pubDate;
@@ -38,12 +38,12 @@ public class Blog {
     public Blog() {
     }
 
-    public Integer getBlogId() {
-        return blogId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setBlogId(Integer blogId) {
-        this.blogId = blogId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {

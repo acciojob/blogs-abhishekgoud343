@@ -10,7 +10,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userId;
+    private Integer id;
 
     private String firstName;
 
@@ -23,8 +23,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Blog> bloglist = new ArrayList<>();
 
-    public User(Integer userId, String firstName, String lastName, String username, String password, List<Blog> bloglist) {
-        this.userId = userId;
+    public User(Integer id, String firstName, String lastName, String username, String password, List<Blog> bloglist) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -35,12 +35,12 @@ public class User {
     public User() {
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {
